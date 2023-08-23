@@ -8,6 +8,7 @@ import { AgregarEditarPersonaComponent } from './components/agregar-editar-perso
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule, MatToolbarModule
+    MatSlideToggleModule, MatToolbarModule, MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
