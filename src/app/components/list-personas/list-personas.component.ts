@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Persona } from 'src/app/interfaces/persona';
 
 const listPersonas: Persona[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
