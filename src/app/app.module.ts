@@ -7,6 +7,7 @@ import { ListPersonasComponent } from './components/list-personas/list-personas.
 import { AgregarEditarPersonaComponent } from './components/agregar-editar-persona/agregar-editar-persona.component';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule, MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
