@@ -7,8 +7,9 @@ import { ListPersonasComponent } from './components/list-personas/list-personas.
 import { AgregarEditarPersonaComponent } from './components/agregar-editar-persona/agregar-editar-persona.component';
 
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatCardModule} from '@angular/material/card';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatCardModule} from '@angular/material/card';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule, MatToolbarModule, MatCardModule
+    MatSlideToggleModule, MatToolbarModule, MatCardModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
