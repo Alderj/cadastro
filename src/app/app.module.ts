@@ -6,6 +6,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ListPersonasComponent } from './components/list-personas/list-personas.component';
 import { AgregarEditarPersonaComponent } from './components/agregar-editar-persona/agregar-editar-persona.component';
 
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +16,8 @@ import { AgregarEditarPersonaComponent } from './components/agregar-editar-perso
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatSlideToggleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
