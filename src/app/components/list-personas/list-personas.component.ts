@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Persona } from 'src/app/interfaces/persona';
 
 const listPersonas: Persona[] = [
-  {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
+  {nombre: 'Alder', apellido: 'Costa', correo: "alder@gmail.com", tipoDocumento: "CPF", documento: 5522, fechaNacimiento: new Date()},
 ];
 
 @Component({
@@ -11,6 +11,6 @@ const listPersonas: Persona[] = [
   styleUrls: ['./list-personas.component.css']
 })
 export class ListPersonasComponent {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  displayedColumns: string[] = ['nombre'];
+  dataSource = listPersonas;
 }
