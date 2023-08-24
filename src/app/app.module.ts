@@ -12,6 +12,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +26,8 @@ import { MatSortModule } from '@angular/material/sort';
     BrowserModule,
     BrowserAnimationsModule,
     MatSlideToggleModule, MatToolbarModule, MatCardModule,
-    MatTableModule, MatPaginatorModule, MatSortModule
+    MatTableModule, MatPaginatorModule, MatSortModule,
+    MatFormFieldModule, MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
