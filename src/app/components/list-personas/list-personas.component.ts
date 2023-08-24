@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Persona } from 'src/app/interfaces/persona';
 
 const listPersonas: Persona[] = [
-  {nombre: 'Alder', apellido: 'Costa', correo: "alder@gmail.com", tipoDocumento: "CPF", documento: 5522, fechaNacimiento: new Date()},
+  {nombre: 'Alder Junio Santana da Costa', apellido: 'Costa', correo: "alder@gmail.com", tipoDocumento: "CPF", documento: 5522, fechaNacimiento: new Date()},
   {nombre: 'Wenderson', apellido: 'Moreno', correo: "wenderson@gmail.com", tipoDocumento: "CPF", documento: 2922, fechaNacimiento: new Date()},
   {nombre: 'Carlos', apellido: 'Neo', correo: "carlos@gmail.com", tipoDocumento: "CPF", documento: 1875, fechaNacimiento: new Date()},
   {nombre: 'Terezinha', apellido: 'Oliveira', correo: "tneo@gmail.com", tipoDocumento: "CPF", documento: 8963, fechaNacimiento: new Date()},
