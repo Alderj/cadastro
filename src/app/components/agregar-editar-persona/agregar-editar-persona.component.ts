@@ -18,7 +18,7 @@ export class AgregarEditarPersonaComponent implements OnInit{
     public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>,
     private fb: FormBuilder){
       this.form = this.fb.group({
-        nombre: ['', Validators.required],
+        nombre: ['', [Validators.required, Validators.maxLength(20)]],
         apellido: ['', Validators.required],
         correo: ['', Validators.required],
         tipoDocumento: [null, Validators.required],
