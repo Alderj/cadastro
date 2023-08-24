@@ -59,7 +59,11 @@
                 <input formControlName="documento" matInput placeholder="Insira seu documento" autocomplete="off">
             </mat-form-field>
             <div class="error">
-                <span *ngIf="form.get('documento')?.hasError('required') && form.get('documento')?.touched">Preenchimento <strong>obrigatório</strong></span>
+                <span *ngIf="form.get('documento')?.hasError('required') && form.get('documento')?.touched">Preenchimento <strong>obrigatório</strong>
+                </span>
+                <span *ngIf="form.get('documento')?.hasError('pattern')">
+                    o documento deve possuir apenas <strong>números</strong>
+                </span>
             </div>
         </div>
 
