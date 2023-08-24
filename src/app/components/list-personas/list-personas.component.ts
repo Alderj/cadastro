@@ -11,6 +11,6 @@ const listPersonas: Persona[] = [
   styleUrls: ['./list-personas.component.css']
 })
 export class ListPersonasComponent {
-  displayedColumns: string[] = ['nombre'];
+  displayedColumns: string[] = ['nombre', 'apellido', 'correo', 'tipoDocumento', 'documento','fechaNacimiento'];
   dataSource = listPersonas;
 }
