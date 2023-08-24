@@ -52,7 +52,7 @@ export class ListPersonasComponent implements OnInit, AfterViewInit{
 
   addEditPersona(){
     const dialogRef = this.dialog.open(AgregarEditarPersonaComponent, {
-      width: '250px',
+      width: '550px',
     });
   }
 }
