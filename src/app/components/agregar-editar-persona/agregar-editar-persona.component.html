@@ -12,7 +12,7 @@
                 <mat-label>Sobrenome</mat-label>
                 <input matInput placeholder="Insira seu sobrenome" autocomplete="off">
             </mat-form-field>
-        </div>        
+        </div>
     </div>
     <div class="row">
         <div class="column">
@@ -22,6 +22,18 @@
             </mat-form-field>
         </div>
     </div>
+    <div class="row">
+        <div class="column">
+            Tipo Documento (SELECT)
+        </div>
+        <div class="column">
+            <mat-form-field appearance="fill">
+                <mat-label>Documento</mat-label>
+                <input matInput placeholder="Insira seu documento" autocomplete="off">
+            </mat-form-field>
+        </div>
+    </div>
+
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button (click)="cancelar()" mat-button>Cancelar</button>
