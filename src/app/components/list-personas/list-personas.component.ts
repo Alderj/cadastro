@@ -61,7 +61,7 @@ export class ListPersonasComponent implements OnInit, AfterViewInit{
     
   }
 
-  ngAfterViewInit(){
+  ngAfterViewInit(): void {
     this.dataSource.paginator = this.paginator;
   }
 }
