@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -9,6 +10,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 export class AgregarEditarPersonaComponent implements OnInit{
 
   tipoDocumento: string[] = ['CPF', 'CNH','RG'];
+  form: FormGroup;
+
 
   constructor( public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>){}
 
