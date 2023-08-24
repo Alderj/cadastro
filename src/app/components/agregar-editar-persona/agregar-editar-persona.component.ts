@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -13,7 +13,9 @@ export class AgregarEditarPersonaComponent implements OnInit{
   form: FormGroup;
 
 
-  constructor( public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>){}
+  constructor( 
+    public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>,
+    private fb: FormBuilder){}
 
   ngOnInit(): void {
   }
