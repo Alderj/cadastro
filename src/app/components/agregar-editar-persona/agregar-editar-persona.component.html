@@ -10,6 +10,8 @@
             </mat-form-field>
             <div class="error">
                 <span *ngIf="form.get('nombre')?.hasError('required') && form.get('nombre')?.touched">Preenchimento <strong>obrigatório</strong></span>
+
+                <span *ngIf="form.get('nombre')?.hasError('maxlength')">O nome deve possuir no máximo<strong> 20 caratcteres</strong></span>
             </div>
         </div>
         <div class="column">
