@@ -31,7 +31,11 @@
                 <input formControlName="correo" matInput placeholder="Insira seu email" autocomplete="off">
             </mat-form-field>
             <div class="error">
-                <span *ngIf="form.get('correo')?.hasError('required') && form.get('correo')?.touched">Preenchimento <strong>obrigatório</strong></span>
+                <span *ngIf="form.get('correo')?.hasError('required') && form.get('correo')?.touched">Preenchimento <strong>obrigatório</strong>
+                </span>
+                <span *ngIf="form.get('correo')?.hasError('email') && form.get('correo')?.touched">
+                    O email é <strong>inválido</strong>
+                </span>
             </div>
         </div>
     </div>
