@@ -12,11 +12,13 @@ export class AgregarEditarPersonaComponent implements OnInit{
 
   tipoDocumento: string[] = ['CPF', 'CNH','RG'];
   form: FormGroup;
+  maxDate: Date; 
 
 
   constructor( 
     public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>,
     private fb: FormBuilder){
+      this.maxDate = new Date();
       this.form = this.fb.group({
         nombre: ['', [Validators.required, Validators.maxLength(20)]],
         apellido: ['', Validators.required],
