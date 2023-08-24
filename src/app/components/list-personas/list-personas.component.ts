@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { Persona } from 'src/app/interfaces/persona';
 
@@ -9,8 +10,7 @@ const listPersonas: Persona[] = [
   {nombre: 'nome3', apellido: 'nome3', correo: "email3@gmail.com", tipoDocumento: "CPF", documento: 1875, fechaNacimiento: new Date()},
   {nombre: 'nome4', apellido: 'nome4', correo: "email4@gmail.com", tipoDocumento: "CPF", documento: 8963, fechaNacimiento: new Date()},
   {nombre: 'nome5', apellido: 'nome5', correo: "email5@gmail.com", tipoDocumento: "CPF", documento: 1514, fechaNacimiento: new Date()},
-  {nombre: 'nome6', apellido: 'nome6', correo: "email6@gmail.com", tipoDocumento: "CPF", documento: 1985, fechaNacimiento: new Date()},
- 
+  {nombre: 'nome6', apellido: 'nome6', correo: "email6@gmail.com", tipoDocumento: "CPF", documento: 1985, fechaNacimiento: new Date()}, 
 ];
 
 @Component({
@@ -23,6 +23,7 @@ export class ListPersonasComponent implements OnInit, AfterViewInit{
   dataSource: MatTableDataSource<Persona>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
+  @ViewChild(MatSort) sort! : MatSort;
 
   constructor(){
     this.dataSource = new MatTableDataSource(listPersonas);
@@ -33,6 +34,7 @@ export class ListPersonasComponent implements OnInit, AfterViewInit{
   }
 
   ngAfterViewInit(): void {
-    this.dataSource.paginator = this.paginator;
+    this.dataSource.paginator = this.paginator; 
+    this.dataSource.sort = this.sort;
   }
 }
