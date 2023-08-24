@@ -55,5 +55,9 @@ export class ListPersonasComponent implements OnInit, AfterViewInit{
       width: '550px',
       disableClose: true
     });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }
