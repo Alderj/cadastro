@@ -1,11 +1,18 @@
 <h2 mat-dialog-title>Adicionar Pessoa</h2>
 <mat-dialog-content>
+    
+
+
     <mat-form-field appearance="fill">
         <mat-label>Nome</mat-label>
-        <input matInput placeholder="Insira seu nome">
-    
-       
+        <input matInput placeholder="Insira seu nome" autocomplete="off">   
     </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+        <mat-label>Sobrenome</mat-label>
+        <input matInput placeholder="Insira seu sobrenome" autocomplete="off">   
+    </mat-form-field>
+
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button (click)="cancelar()" mat-button>Cancelar</button>
