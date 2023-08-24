@@ -22,7 +22,7 @@ export class AgregarEditarPersonaComponent implements OnInit{
         apellido: ['', Validators.required],
         correo: ['', [Validators.required, Validators.email]],
         tipoDocumento: [null, Validators.required],
-        documento: [null, Validators.required],
+        documento: [null, [Validators.required, Validators.pattern("[0-9]*$")]],
         fechaNacimiento: [null, Validators.required],
       })
     }
