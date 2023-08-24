@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -20,13 +21,13 @@ import { MatButtonModule } from '@angular/material/button';
     MatSlideToggleModule, MatToolbarModule, MatCardModule,
     MatTableModule, MatPaginatorModule, MatSortModule,
     MatFormFieldModule, MatInputModule, MatIconModule,
-    MatTooltipModule, MatButtonModule
-    
+    MatTooltipModule, MatButtonModule, MatDialogModule
+
   ], exports: [
     MatSlideToggleModule, MatToolbarModule, MatCardModule,
     MatTableModule, MatPaginatorModule, MatSortModule,
     MatFormFieldModule, MatInputModule, MatIconModule,
-    MatTooltipModule, MatButtonModule
+    MatTooltipModule, MatButtonModule, MatDialogModule
   ]
 })
 export class SharedModule { }
