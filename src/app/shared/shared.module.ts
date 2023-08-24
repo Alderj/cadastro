@@ -17,6 +17,10 @@ import { MatButtonModule } from '@angular/material/button';
   declarations: [],
   imports: [
     CommonModule,
+    MatSlideToggleModule, MatToolbarModule, MatCardModule,
+    MatTableModule, MatPaginatorModule, MatSortModule,
+    MatFormFieldModule, MatInputModule, MatIconModule,
+    MatTooltipModule, MatButtonModule
     
   ], exports: [
     MatSlideToggleModule, MatToolbarModule, MatCardModule,
