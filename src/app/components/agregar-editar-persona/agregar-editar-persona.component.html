@@ -73,7 +73,7 @@
         <div class="column">
             <mat-form-field class="example-full-width">
                 <mat-label>Insira a Data de Nascimento</mat-label>
-                <input formControlName="fechaNacimiento" matInput [matDatepicker]="picker">
+                <input [max]="maxDate" formControlName="fechaNacimiento" matInput [matDatepicker]="picker">
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker touchUi #picker></mat-datepicker>
             </mat-form-field>
