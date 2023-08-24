@@ -8,6 +8,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class AgregarEditarPersonaComponent implements OnInit{
 
+  tipoDocumento: string[] = ['CPF', 'CNH','RG'];
+
   constructor( public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>){}
 
   ngOnInit(): void {
