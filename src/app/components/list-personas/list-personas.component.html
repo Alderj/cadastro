@@ -4,8 +4,8 @@
 
 <mat-card class="mat-card">
     <mat-form-field>
-        <mat-label>Filter</mat-label>
-        <input matInput placeholder="Ex. Mia" #input autocomplete="off">
+        <mat-label>Filtrar</mat-label>
+        <input matInput (keyup)="applyFilter($event)" placeholder="" #input autocomplete="off">
       </mat-form-field>
 
     <table matSort mat-table [dataSource]="dataSource" class="mat-elevation-z15">
