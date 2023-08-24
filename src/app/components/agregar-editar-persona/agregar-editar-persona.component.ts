@@ -20,7 +20,7 @@ export class AgregarEditarPersonaComponent implements OnInit{
       this.form = this.fb.group({
         nombre: ['', [Validators.required, Validators.maxLength(20)]],
         apellido: ['', Validators.required],
-        correo: ['', Validators.required],
+        correo: ['', [Validators.required, Validators.email]],
         tipoDocumento: [null, Validators.required],
         documento: [null, Validators.required],
         fechaNacimiento: [null, Validators.required],
