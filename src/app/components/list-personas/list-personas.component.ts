@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { Persona } from 'src/app/interfaces/persona';
 
 const listPersonas: Persona[] = [
@@ -45,7 +47,21 @@ const listPersonas: Persona[] = [
   templateUrl: './list-personas.component.html',
   styleUrls: ['./list-personas.component.css']
 })
-export class ListPersonasComponent {
+export class ListPersonasComponent implements OnInit, AfterViewInit{
   displayedColumns: string[] = ['nombre', 'apellido', 'correo', 'tipoDocumento', 'documento','fechaNacimiento'];
-  dataSource = listPersonas;
+  dataSource: MatTableDataSource<Persona>;
+
+  @ViewChild(MatPaginator) paginator!: MatPaginator;
+
+  constructor(){
+    this.dataSource = new MatTableDataSource(listPersonas);
+  }
+
+  ngOnInit(): void {
+    
+  }
+
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+  }
 }
