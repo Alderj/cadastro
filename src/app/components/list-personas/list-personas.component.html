@@ -4,12 +4,15 @@
 
 <mat-card class="mat-card">
 
-    <mat-form-field>
-        <mat-label>Filtrar</mat-label>
-        <input matInput (keyup)="applyFilter($event)" placeholder="" #input autocomplete="off">
-    </mat-form-field>
+    <div>
+        <mat-form-field class="aldo">
+            <mat-label>Filtrar</mat-label>
+            <input matInput (keyup)="applyFilter($event)" placeholder="" #input autocomplete="off">
+        </mat-form-field>
+        <button mat-raised-button color="primary">Primary</button>
+    </div>
 
-    <button mat-raised-button color="primary">Primary</button>
+    
     
 
 
