@@ -19,7 +19,8 @@ const listPersonas: Persona[] = [
   styleUrls: ['./list-personas.component.css']
 })
 export class ListPersonasComponent implements OnInit, AfterViewInit{
-  displayedColumns: string[] = ['nombre', 'apellido', 'correo', 'tipoDocumento', 'documento','fechaNacimiento'];
+  displayedColumns: string[] = ['nombre', 'apellido', 'correo',
+   'tipoDocumento', 'documento','fechaNacimiento', 'acciones'];
   dataSource: MatTableDataSource<Persona>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
