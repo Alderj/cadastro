@@ -6,13 +6,13 @@
         <div class="column">
             <mat-form-field appearance="fill">
                 <mat-label>Nome</mat-label>
-                <input matInput placeholder="Insira seu nome" autocomplete="off">
+                <input formControlName="nombre" matInput placeholder="Insira seu nome" autocomplete="off">
             </mat-form-field>
         </div>
         <div class="column">
             <mat-form-field appearance="fill">
                 <mat-label>Sobrenome</mat-label>
-                <input matInput placeholder="Insira seu sobrenome" autocomplete="off">
+                <input formControlName="apellido" matInput placeholder="Insira seu sobrenome" autocomplete="off">
             </mat-form-field>
         </div>
     </div>
@@ -20,7 +20,7 @@
         <div class="column">
             <mat-form-field appearance="fill">
                 <mat-label>Email</mat-label>
-                <input matInput placeholder="Insira seu email" autocomplete="off">
+                <input formControlName="correo" matInput placeholder="Insira seu email" autocomplete="off">
             </mat-form-field>
         </div>
     </div>
@@ -28,7 +28,7 @@
         <div class="column">
             <mat-form-field>
                 <mat-label>Tipo de Documento</mat-label>
-                <mat-select>
+                <mat-select formControlName="tipoDocumento">
                     <mat-option *ngFor="let item of tipoDocumento" [value]="item">
                         {{ item }}
                     </mat-option>
@@ -38,7 +38,7 @@
         <div class="column">
             <mat-form-field appearance="fill">
                 <mat-label>Documento</mat-label>
-                <input matInput placeholder="Insira seu documento" autocomplete="off">
+                <input formControlName="documento" matInput placeholder="Insira seu documento" autocomplete="off">
             </mat-form-field>
         </div>
     </div>
@@ -47,7 +47,7 @@
         <div class="column">
             <mat-form-field class="example-full-width">
                 <mat-label>Insira a Data de Nascimento</mat-label>
-                <input matInput [matDatepicker]="picker">
+                <input formControlName="fechaNacimiento" matInput [matDatepicker]="picker">
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker touchUi #picker></mat-datepicker>
             </mat-form-field>
