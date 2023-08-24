@@ -1,4 +1,6 @@
 <h2 mat-dialog-title>Adicionar Pessoa</h2>
+<form [formGroup]="form" (ngSubmit)="addEditPersona()">
+
 <mat-dialog-content>
     <div class="row">
         <div class="column">
@@ -28,7 +30,7 @@
                 <mat-label>Tipo de Documento</mat-label>
                 <mat-select>
                     <mat-option *ngFor="let item of tipoDocumento" [value]="item">
-                        {{ item}}
+                        {{ item }}
                     </mat-option>
                 </mat-select>
             </mat-form-field>
@@ -54,6 +56,8 @@
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
-    <button (click)="cancelar()" mat-button>Cancelar</button>
-    <button mat-button cdkFocusInitial>Aceitar</button>
+    <button type="button" (click)="cancelar()" mat-button>Cancelar</button>
+    <button type="submit" mat-button cdkFocusInitial>Aceitar</button>
 </mat-dialog-actions>
+
+</form>

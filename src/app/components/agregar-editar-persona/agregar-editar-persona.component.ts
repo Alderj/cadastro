@@ -33,4 +33,8 @@ export class AgregarEditarPersonaComponent implements OnInit{
     this.dialogRef.close();
   }
 
+  addEditPersona(){
+    console.log('agregar')
+  }
+
 }
