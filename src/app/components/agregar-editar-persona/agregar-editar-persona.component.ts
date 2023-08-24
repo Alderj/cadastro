@@ -35,6 +35,10 @@ export class AgregarEditarPersonaComponent implements OnInit{
   }
 
   addEditPersona(){
+
+    /*if(this.form.invalid){
+      return;
+    }*/
     
     const persona: Persona = {
       nombre: this.form.value.nombre,

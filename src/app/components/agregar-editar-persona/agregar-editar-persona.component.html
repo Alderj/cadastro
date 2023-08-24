@@ -8,12 +8,18 @@
                 <mat-label>Nome</mat-label>
                 <input formControlName="nombre" matInput placeholder="Insira seu nome" autocomplete="off">
             </mat-form-field>
+            <div class="error">
+                <span *ngIf="form.get('nombre')?.hasError('required') && form.get('nombre')?.touched">Preenchimento <strong>obrigatório</strong></span>
+            </div>
         </div>
         <div class="column">
             <mat-form-field appearance="fill">
                 <mat-label>Sobrenome</mat-label>
                 <input formControlName="apellido" matInput placeholder="Insira seu sobrenome" autocomplete="off">
             </mat-form-field>
+            <div class="error">
+                <span *ngIf="form.get('apellido')?.hasError('required') && form.get('apellido')?.touched">Preenchimento <strong>obrigatório</strong></span>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -22,6 +28,9 @@
                 <mat-label>Email</mat-label>
                 <input formControlName="correo" matInput placeholder="Insira seu email" autocomplete="off">
             </mat-form-field>
+            <div class="error">
+                <span *ngIf="form.get('correo')?.hasError('required') && form.get('correo')?.touched">Preenchimento <strong>obrigatório</strong></span>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -34,13 +43,20 @@
                     </mat-option>
                 </mat-select>
             </mat-form-field>
+            <div class="error">
+                <span *ngIf="form.get('tipoDocumento')?.hasError('required') && form.get('tipoDocumento')?.touched">Preenchimento <strong>obrigatório</strong></span>
+            </div>
         </div>
         <div class="column">
             <mat-form-field appearance="fill">
                 <mat-label>Documento</mat-label>
                 <input formControlName="documento" matInput placeholder="Insira seu documento" autocomplete="off">
             </mat-form-field>
+            <div class="error">
+                <span *ngIf="form.get('documento')?.hasError('required') && form.get('documento')?.touched">Preenchimento <strong>obrigatório</strong></span>
+            </div>
         </div>
+
     </div>
 
     <div class="row">
@@ -51,13 +67,16 @@
                 <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
                 <mat-datepicker touchUi #picker></mat-datepicker>
             </mat-form-field>
+            <div class="error">
+                <span *ngIf="form.get('fechaNacimiento')?.hasError('required') && form.get('fechaNacimiento')?.touched">Preenchimento <strong>obrigatório</strong></span>
+            </div>
         </div>
     </div>
 
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button type="button" (click)="cancelar()" mat-button>Cancelar</button>
-    <button [disabled]="form.invalid" type="submit" mat-button cdkFocusInitial>Aceitar</button>
+    <button type="submit" mat-button cdkFocusInitial>Aceitar</button>
 </mat-dialog-actions>
 
 </form>
