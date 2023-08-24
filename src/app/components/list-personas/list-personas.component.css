@@ -1,6 +1,6 @@
-.mat-card{
-  max-width: 100%;
-  margin: 20px;
+.mat-form-field{
+  font-size: 14px;
+  max-width: 90%;  
 }
 
 .btnEdit, .btnDelete{
@@ -13,5 +13,9 @@
 
 .btnEdit{
   color: #4b7bcd;
+}
+
+button{
+  width: 40px;
 }
 
