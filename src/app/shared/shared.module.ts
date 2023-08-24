@@ -13,12 +13,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatButtonModule } from '@angular/material/button';
 
-
-
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
+    
+  ], exports: [
     MatSlideToggleModule, MatToolbarModule, MatCardModule,
     MatTableModule, MatPaginatorModule, MatSortModule,
     MatFormFieldModule, MatInputModule, MatIconModule,
