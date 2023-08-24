@@ -15,7 +15,16 @@ export class AgregarEditarPersonaComponent implements OnInit{
 
   constructor( 
     public dialogRef: MatDialogRef<AgregarEditarPersonaComponent>,
-    private fb: FormBuilder){}
+    private fb: FormBuilder){
+      this.form = this.fb.group({
+        nombre: [''],
+        apellido: [''],
+        correo: [''],
+        tipoDocumento: [null],
+        documento: [null],
+        fechaNacimiento: [null],
+      })
+    }
 
   ngOnInit(): void {
   }
